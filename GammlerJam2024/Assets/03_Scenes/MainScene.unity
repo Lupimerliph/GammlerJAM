@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisChara: 2
-  charaRoom: 2
+  charaRoom: 0
   transitionDuration: 2
   originPosition: {x: 11.7, y: -2, z: 0}
   fullPosition: {x: 6, y: -0.6, z: 0}
@@ -740,7 +740,7 @@ MonoBehaviour:
   toiletBG: {fileID: 0}
   currentRoomBG: {fileID: 0}
   minBlackTime: 1
-  minZoomTime: 6
+  minZoomTime: 16
   kalenderZoomPos: {x: -19.6, y: -0.94, z: 0}
   kalenderZoomScale: {x: 3.2, y: 3.2, z: 0}
 --- !u!1 &995996433
@@ -1352,7 +1352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1728532012
 Transform:
   m_ObjectHideFlags: 0

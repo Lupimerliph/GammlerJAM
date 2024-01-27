@@ -12,6 +12,7 @@ public class BGManager : MonoBehaviour
     public Sprite lobbyBG, funZoneBG, cafeteriaBG, toiletBG, currentRoomBG;
     public float minBlackTime = 1, minZoomTime = 1; //sonst ist die Überblende zu schnell
     public Vector3 kalenderZoomPos, kalenderZoomScale;
+    Tween blackTween;
 
     private void Start()
     {
@@ -49,32 +50,27 @@ public class BGManager : MonoBehaviour
     
     public IEnumerator FadeToBlack(float fadeDuration)
     {        
-        float timePassed = 0;
-        blackScreen.DOFade(1, fadeDuration);
-        while (timePassed < fadeDuration + minBlackTime)
-        {
-            timePassed += Time.deltaTime;
-            yield return null;
-        }
+        blackScreen.DOFade(1, fadeDuration);        
+        yield return new WaitForSeconds(fadeDuration + minBlackTime);
         spriteRenderer.sprite = currentRoomBG;
         blackScreen.DOFade(0, fadeDuration);
     }
 
+
     public IEnumerator ZoomOnCalender(float zoomDuration)
     {
-        float timePassed = 0;
         transform.DOLocalMove(kalenderZoomPos, zoomDuration);
         transform.DOScale(kalenderZoomScale, zoomDuration);
-
-        while (timePassed < zoomDuration + minBlackTime)
-        {
-            timePassed += Time.deltaTime;
-            yield return null;
-        }
+            yield return new WaitForSeconds(zoomDuration + minBlackTime);
         transform.DOLocalMove(Vector3.zero, zoomDuration);
         transform.DOScale(Vector3.one, zoomDuration);
 
         blackScreen.DOFade(0, zoomDuration);
+    }
+
+    public IEnumerator EddyFlicker()
+    {
+        yield return null;
     }
 
 }
