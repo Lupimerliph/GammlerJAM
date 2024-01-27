@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager gmManager;
-    Coroutine sceneLoading;
+    public BGManager bgManager;
+
     private void Awake()
     {
         if (gmManager == null)
@@ -45,4 +46,27 @@ public class GameManager : MonoBehaviour
     {
         return SceneManager.GetSceneAt(sceneID).GetRootGameObjects()[0];
     }
+
+
+
+    #region Screen aspect ration
+
+    private float lastWidth;
+    private float lastHeight;
+
+    void Update()
+    {
+        if (lastWidth != Screen.width)
+        {
+            Screen.SetResolution(Screen.width, Screen.width * (16 / 9), false);
+        }
+        else if (lastHeight != Screen.height)
+        {
+            Screen.SetResolution(Screen.height * (9 / 16), Screen.height, false);
+        }
+
+        lastWidth = Screen.width;
+        lastHeight = Screen.height;
+    }
+    #endregion
 }
