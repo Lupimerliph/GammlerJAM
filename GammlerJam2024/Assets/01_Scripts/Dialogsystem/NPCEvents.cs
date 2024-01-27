@@ -19,7 +19,7 @@ public class NPCEvents : MonoBehaviour
 
     public void ChangeEmote(int emoteID)
     {
-
+        DialogManager.diaManager.currentSpeaker.SwitchPose(emoteID);
     }
 
     public void GetItem()
