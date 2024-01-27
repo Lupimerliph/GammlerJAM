@@ -184,6 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 924315843}
   - component: {fileID: 924315842}
+  - component: {fileID: 924315844}
   m_Layer: 0
   m_Name: TestConversation
   m_TagString: Untagged
@@ -233,6 +234,18 @@ Transform:
   - {fileID: 470245392}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &924315844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924315841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 783d600559284cd479c77ad827d6d9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

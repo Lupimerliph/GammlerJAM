@@ -47,8 +47,6 @@ public class GameManager : MonoBehaviour
         return SceneManager.GetSceneAt(sceneID).GetRootGameObjects()[0];
     }
 
-
-
     #region Screen aspect ration
 
     private float lastWidth;

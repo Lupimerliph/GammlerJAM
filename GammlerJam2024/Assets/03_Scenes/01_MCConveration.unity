@@ -133,6 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 848069383}
   - component: {fileID: 848069382}
+  - component: {fileID: 848069385}
+  - component: {fileID: 848069384}
   m_Layer: 0
   m_Name: ConversationEventInfo
   m_TagString: Untagged
@@ -174,6 +176,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1106970470}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &848069384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848069381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 2
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 0}
+  Audio: {fileID: 0}
+--- !u!114 &848069385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848069381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1106970471}
+        m_TargetAssemblyTypeName: NPCEvents, Assembly-CSharp
+        m_MethodName: ChangeRoom
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: lobby
+          m_BoolArgument: 0
+        m_CallState: 2
+  NodeID: 1
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 0}
+  Audio: {fileID: 0}
 --- !u!1 &1106970468
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,6 +236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1106970470}
   - component: {fileID: 1106970469}
+  - component: {fileID: 1106970471}
   m_Layer: 0
   m_Name: MCDefaultConvo
   m_TagString: Untagged
@@ -203,8 +256,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentIDCounter: 1
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":477,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"No
+  CurrentIDCounter: 3
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":524,"yPos":394},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Ich
+    sollte nach meinen Sachen suchen","parentUIDs":[0],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":814,"yPos":399},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"nee","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":520,"yPos":259},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"No
     thoughts, head empty","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":null,"OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Me
@@ -212,11 +266,25 @@ MonoBehaviour:
   DefaultFont: {fileID: 0}
   NodeSerializedDataList:
   - {fileID: 848069382}
+  - {fileID: 848069385}
+  - {fileID: 848069384}
   ContinueFont: {fileID: 0}
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1106970471}
+        m_TargetAssemblyTypeName: NPCEvents, Assembly-CSharp
+        m_MethodName: ChangeRoom
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: lobby
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1106970470
 Transform:
   m_ObjectHideFlags: 0
@@ -233,6 +301,18 @@ Transform:
   - {fileID: 848069383}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1106970471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106970468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 783d600559284cd479c77ad827d6d9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
