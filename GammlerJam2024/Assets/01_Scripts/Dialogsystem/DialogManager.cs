@@ -8,9 +8,9 @@ public class DialogManager : MonoBehaviour
     public static DialogManager diaManager;
     public charaID currentChara;
     public bool inConversation; //später verhindern, dass Sprite öfters angeklickt werden kann.
-    //oder hier auch trasition zumn close up shot
     public NPCConversation currentDialog;
     public NPCConversation testDia, milDia, enDia, pebDia, bearDia, friDia, pabloDia, mcDia;  
+    public DiaActivator currentSpeaker;
 
     private void Awake()
     {
@@ -53,6 +53,7 @@ public class DialogManager : MonoBehaviour
     }
 
         NPCConversation convo = currentDialog;
+        inConversation = true;
         return convo;
 
     } 
@@ -65,7 +66,21 @@ public class DialogManager : MonoBehaviour
         }
         else return charaConvo;
     }
+    private void OnEnable()
+    {
+        ConversationManager.OnConversationEnded += EndConversation;
+    }
+    private void OnDisable()
+    {
+        ConversationManager.OnConversationEnded -= EndConversation;
+    }
 
+    public void EndConversation()
+    {
+        currentSpeaker.MoveCharacter(currentSpeaker.originPosition, currentSpeaker.originScale);
+        inConversation = false;
+        Debug.Log("ThisConversation is over");
+    }
 }
 
 public enum charaID
