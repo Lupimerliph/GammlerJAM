@@ -6,6 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/03_Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/03_Scenes/TestScene.unity
+    guid: 4f6b5fa1fb991ea458331e406f10d591
+  - enabled: 1
+    path: Assets/03_Scenes/01_MCConveration.unity
+    guid: f170e317d2d828b49914bfc682e25d90
+  - enabled: 1
+    path: Assets/03_Scenes/02_MillieConversation.unity
+    guid: 7e847a005ef131744b66999efb8dbd5b
+  - enabled: 1
+    path: Assets/03_Scenes/03_EnConversation.unity
+    guid: 9d33ecae1c441ea4bb2eebae1d631b92
+  - enabled: 1
+    path: Assets/03_Scenes/04_PebblesConversation.unity
+    guid: fe737554b83c9ed449586402c7361be5
+  - enabled: 1
+    path: Assets/03_Scenes/05_BearnandConversation.unity
+    guid: 302f2883fca53cb49ac48582fc715462
+  - enabled: 1
+    path: Assets/03_Scenes/06_FritzConversation.unity
+    guid: 970948ad2948b1b49a74c524786605c0
+  - enabled: 1
+    path: Assets/03_Scenes/07_PabloCOnversation.unity
+    guid: 41e63ba23ab7ca44290fadba550c9fb7
+  - enabled: 1
+    path: Assets/03_Scenes/08_testConvo.unity
+    guid: 6f46e776daf32564789301305e29c51a
   m_configObjects: {}

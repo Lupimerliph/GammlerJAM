@@ -7,8 +7,8 @@ public class DialogManager : MonoBehaviour
 {
     public static DialogManager diaManager;
     public charaID currentChara;
-    public GameObject currentDialog;
-    public GameObject testDia, milDia, enDia, pebDia, bearDia, friDia, pabloDia, mcDia;  
+    public NPCConversation currentDialog;
+    public NPCConversation testDia, milDia, enDia, pebDia, bearDia, friDia, pabloDia, mcDia;  
 
     private void Awake()
     {
@@ -24,47 +24,56 @@ public class DialogManager : MonoBehaviour
         //später muss hier currentDialog gesetzt werden durch CHara
             switch (currentChara)
         {
-            case charaID.testChara:
-                currentDialog = testDia;
+            case charaID.mc:
+                currentDialog = InsertConversation(1, mcDia);
                 break;
-            case charaID.millie:
-                currentDialog = milDia;
+            case charaID.millie:                
+                currentDialog = InsertConversation(2, milDia);
                 break;
             case charaID.enrico:
-                currentDialog = enDia;
+                currentDialog = InsertConversation(3, enDia);
                 break;
             case charaID.pebbles:
-                currentDialog = pebDia;
+                currentDialog = InsertConversation(4, pebDia);
                 break;
             case charaID.bearnand:
-                currentDialog = bearDia;
+                currentDialog = InsertConversation(5, bearDia);
                 break;
             case charaID.fritz:
-                currentDialog = friDia;
+                currentDialog = InsertConversation(6, friDia);
                 break;
             case charaID.pablo:
-                currentDialog = pabloDia;
+                currentDialog = InsertConversation(7, pabloDia);
+                break;           
+            case charaID.testChara:
+                currentDialog = InsertConversation(8, testDia);
                 break;
-            case charaID.mc:
-                currentDialog = mcDia;
-                break;
-        }
+    }
 
-        NPCConversation convo = currentDialog.GetComponent<NPCConversation>();
+        NPCConversation convo = currentDialog;
         return convo;
 
     } 
+
+    public NPCConversation InsertConversation(int index, NPCConversation charaConvo)
+    {
+        if (charaConvo == null)
+        {
+            return GameManager.gmManager.SetNewConvo(index).GetComponent<NPCConversation>();
+        }
+        else return charaConvo;
+    }
 
 }
 
 public enum charaID
 {
-    testChara,
+    mc,
     millie,
     enrico, 
     pebbles,
     bearnand,
     fritz,
     pablo,
-    mc
+    testChara
 }

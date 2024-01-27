@@ -8,7 +8,7 @@ public class TestDiaActivator : MonoBehaviour
     public NPCConversation testConvo;
     public charaID thisChara;
     public bool inConversation; //später verhindern, dass Sprite öfters angeklickt werden kann.
-
+    //oder hier auch trasition zumn close up shot
     private void OnMouseOver() 
     {
         if (Input.GetMouseButtonDown(0) && !inConversation)
