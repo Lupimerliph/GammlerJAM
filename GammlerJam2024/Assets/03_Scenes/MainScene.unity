@@ -736,7 +736,7 @@ MonoBehaviour:
   blackScreen: {fileID: 1375682886}
   lobbyBG: {fileID: 21300000, guid: 4d4e91b5a7d45ae4ba495a52d4c3b51d, type: 3}
   funZoneBG: {fileID: 21300000, guid: 60d1539e347c6b149ab8943e6dce19b0, type: 3}
-  cafeteriaBG: {fileID: 21300000, guid: b59d18270471fba47a81488aefde8f3a, type: 3}
+  cafeteriaBG: {fileID: 21300000, guid: 60d1539e347c6b149ab8943e6dce19b0, type: 3}
   toiletBG: {fileID: 0}
   currentRoomBG: {fileID: 0}
   minBlackTime: 1
