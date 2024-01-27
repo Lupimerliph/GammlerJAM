@@ -12,9 +12,9 @@ public class NPCEvents : MonoBehaviour
         }
     }
 
-    public void BlackFade()//evtl mit variabler Länge
+    public void BlackFade(int fadeDuration)//evtl mit variabler Länge
     {
-        //call to gmManager
+        StartCoroutine(GameManager.gmManager.bgManager.FadeToBlack(fadeDuration));
     }
 
     public void ChangeEmote(int emoteID)
