@@ -22,15 +22,24 @@ public class NPCEvents : MonoBehaviour
         DialogManager.diaManager.currentSpeaker.SwitchPose(emoteID);
     }
 
-    public void GetItem()
+    public void FlickeringLights()
     {
-
+        GameManager.gmManager.bgManager.Flicker();
     }
 
     public void WeHadThisConversation()
     {
         //need ref to the chara
     }
+
+    public void SetNewStartingPoint(GameObject diaObject)
+    {
+        DialogManager.diaManager.SetNewConvo(diaObject);
+    }
         
+    public void LookAtKalendar()
+    {
+        StartCoroutine(GameManager.gmManager.bgManager.ZoomOnCalender(3));
+    }
 
 }

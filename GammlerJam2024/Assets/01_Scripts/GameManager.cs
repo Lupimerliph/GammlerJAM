@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
         StartCoroutine(LoadConvoScene(6));
         StartCoroutine(LoadConvoScene(7));
         StartCoroutine(LoadConvoScene(8));
-
     }
 
     public IEnumerator LoadConvoScene(int sceneID)

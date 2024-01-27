@@ -19,11 +19,9 @@ public class DialogManager : MonoBehaviour
             diaManager = this;
         }
     }
-
     public NPCConversation SetCurrentDialog(charaID chara)
     {
-        currentChara = chara;
-        //später muss hier currentDialog gesetzt werden durch CHara
+        currentChara = chara; 
             switch (currentChara)
         {
             case charaID.mc:
@@ -79,7 +77,12 @@ public class DialogManager : MonoBehaviour
     {
         currentSpeaker.MoveCharacter(currentSpeaker.originPosition, currentSpeaker.originScale);
         inConversation = false;
-        Debug.Log("ThisConversation is over");
+        Debug.Log("This Conversation is over");
+    }
+
+    public void SetNewConvo(GameObject ConvoObj)
+    {
+        mcDia = ConvoObj.GetComponent<NPCConversation>();//Problem der Zukunft: Script funktioniert nur mit mc grad
     }
 }
 

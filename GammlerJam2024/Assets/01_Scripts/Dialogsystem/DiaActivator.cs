@@ -7,6 +7,7 @@ using DG.Tweening;
 public class DiaActivator : MonoBehaviour
 {
     public charaID thisChara;
+    public room charaRoom;
     public float transitionDuration; //shorter = more speed
     public Vector3 originPosition, fullPosition, originScale;
     public Sprite defaultPose, pose1, pose2, pose3, pose4;
@@ -17,6 +18,16 @@ public class DiaActivator : MonoBehaviour
         originPosition = transform.localPosition;
         originScale = transform.localScale;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        if(charaRoom!= GameManager.gmManager.bgManager.thisRoom)
+        {
+            ActiveCharacter(false);
+        }
+    }
+
+    void ActiveCharacter(bool status)
+    {
+        spriteRenderer.enabled = status;
+        GetComponent<Collider2D>().enabled = status;
     }
 
     private void OnMouseOver() 
@@ -47,7 +58,6 @@ public class DiaActivator : MonoBehaviour
             case 4:
                 spriteRenderer.sprite = pose4;
                 break;
-
         }
          
     }
@@ -57,4 +67,5 @@ public class DiaActivator : MonoBehaviour
         transform.DOLocalMove(destinationPos, transitionDuration);
         transform.DOScale(destinationScale, transitionDuration);
     }
+        
 }
