@@ -7,6 +7,8 @@ public class DialogManager : MonoBehaviour
 {
     public static DialogManager diaManager;
     public charaID currentChara;
+    public bool inConversation; //später verhindern, dass Sprite öfters angeklickt werden kann.
+    //oder hier auch trasition zumn close up shot
     public NPCConversation currentDialog;
     public NPCConversation testDia, milDia, enDia, pebDia, bearDia, friDia, pabloDia, mcDia;  
 
@@ -46,7 +48,7 @@ public class DialogManager : MonoBehaviour
                 currentDialog = InsertConversation(7, pabloDia);
                 break;           
             case charaID.testChara:
-                currentDialog = InsertConversation(8, testDia);
+                currentDialog = InsertConversation(8, testDia); 
                 break;
     }
 
@@ -75,5 +77,5 @@ public enum charaID
     bearnand,
     fritz,
     pablo,
-    testChara
+    testChara 
 }

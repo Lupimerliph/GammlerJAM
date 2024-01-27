@@ -17,6 +17,13 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(LoadConvoScene(1));
+        StartCoroutine(LoadConvoScene(2));
+        StartCoroutine(LoadConvoScene(3));
+        StartCoroutine(LoadConvoScene(4));
+        StartCoroutine(LoadConvoScene(5));
+        StartCoroutine(LoadConvoScene(6));
+        StartCoroutine(LoadConvoScene(7));
+        StartCoroutine(LoadConvoScene(8));
 
     }
 

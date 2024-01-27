@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using DialogueEditor;
 
-public class TestDiaActivator : MonoBehaviour
+public class DiaActivator : MonoBehaviour
 {
-    public NPCConversation testConvo;
     public charaID thisChara;
-    public bool inConversation; //später verhindern, dass Sprite öfters angeklickt werden kann.
-    //oder hier auch trasition zumn close up shot
+    
     private void OnMouseOver() 
     {
-        if (Input.GetMouseButtonDown(0) && !inConversation)
+        if (Input.GetMouseButtonDown(0) && !DialogManager.diaManager.inConversation)
         {            
             ConversationManager.Instance.StartConversation(DialogManager.diaManager.SetCurrentDialog(thisChara));
         }             
