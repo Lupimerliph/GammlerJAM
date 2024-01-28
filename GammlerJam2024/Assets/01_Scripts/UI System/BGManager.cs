@@ -90,6 +90,7 @@ public class BGManager : MonoBehaviour
             eddyTween = eddy.transform.DOLocalMoveY(eddy.originPosition.y, 5);
         }
     }
+
     public IEnumerator EddyReveal()
     {
         eddy.spriteRenderer.sortingOrder = 0;
