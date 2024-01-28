@@ -12,6 +12,7 @@ public class DiaActivator : MonoBehaviour
     public Vector3 originPosition, fullPosition, originScale;
     public Sprite defaultPose, pose1, pose2, pose3, pose4;
     private SpriteRenderer spriteRenderer;
+    private bool activityStatus = true;
 
     private void Start()
     {
@@ -24,10 +25,20 @@ public class DiaActivator : MonoBehaviour
         }
     }
 
-    void ActiveCharacter(bool status)
+    public void ActiveCharacter(bool status)
     {
-        spriteRenderer.enabled = status;
-        GetComponent<Collider2D>().enabled = status;
+        if(activityStatus != status)
+        {
+            if(status && charaRoom != GameManager.gmManager.bgManager.thisRoom)
+            {
+            }
+            else
+            {
+                spriteRenderer.enabled = status;
+                GetComponent<Collider2D>().enabled = status;
+                activityStatus = status;
+            }
+        }
     }
 
     private void OnMouseOver() 
@@ -37,8 +48,20 @@ public class DiaActivator : MonoBehaviour
             ConversationManager.Instance.StartConversation(DialogManager.diaManager.SetCurrentDialog(thisChara));
             MoveCharacter(fullPosition, Vector3.one);
             DialogManager.diaManager.currentSpeaker = this;
+            HideNonSpeaker(false);
         }             
     }
+    public void HideNonSpeaker(bool toUnHide)
+    {
+        foreach (Transform speaker in transform.parent)
+        {
+            if (speaker != transform && speaker.TryGetComponent(out DiaActivator dia))
+            {
+                dia.ActiveCharacter(toUnHide);
+            }
+        }
+    }
+
     public void SwitchPose(int poseID)
     {        
         switch (poseID)

@@ -19,6 +19,19 @@ public class DialogManager : MonoBehaviour
             diaManager = this;
         }
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            ConversationManager.Instance.ScrollSpeed = 0.25f;
+        }
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            ConversationManager.Instance.ScrollSpeed = 0.25f;
+        }
+    }
+
     public NPCConversation SetCurrentDialog(charaID chara)
     {
         currentChara = chara; 
@@ -53,7 +66,6 @@ public class DialogManager : MonoBehaviour
         NPCConversation convo = currentDialog;
         inConversation = true;
         return convo;
-
     } 
 
     public NPCConversation InsertConversation(int index, NPCConversation charaConvo)
@@ -63,7 +75,9 @@ public class DialogManager : MonoBehaviour
             return GameManager.gmManager.SetNewConvo(index).GetComponent<NPCConversation>();
         }
         else return charaConvo;
+
     }
+
     private void OnEnable()
     {
         ConversationManager.OnConversationEnded += EndConversation;
@@ -77,8 +91,11 @@ public class DialogManager : MonoBehaviour
     {
         currentSpeaker.MoveCharacter(currentSpeaker.originPosition, currentSpeaker.originScale);
         inConversation = false;
+        currentSpeaker.HideNonSpeaker(true);
         Debug.Log("This Conversation is over");
     }
+
+    
 
     public void SetNewConvo(GameObject ConvoObj)
     {
