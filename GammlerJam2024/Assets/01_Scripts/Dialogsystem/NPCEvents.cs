@@ -42,4 +42,8 @@ public class NPCEvents : MonoBehaviour
         StartCoroutine(GameManager.gmManager.bgManager.ZoomOnCalender(3));
     }
 
+    public void TriggerEnd(int endID)
+    {
+        StartCoroutine(GameManager.gmManager.bgManager.AnEnd(endID));
+    }
 }

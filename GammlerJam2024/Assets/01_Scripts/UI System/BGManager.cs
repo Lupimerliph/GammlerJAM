@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using DialogueEditor;
+
 
 public class BGManager : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
     public room thisRoom;
-    public Image blackScreen;
+    public Image blackScreen, endScreen;
     public Sprite lobbyBG, funZoneBG, cafeteriaBG, toiletBG, currentRoomBG;
-    public float minBlackTime = 1, minZoomTime = 1; //sonst ist die Überblende zu schnell
+    public float minBlackTime = 1, minZoomTime = 1, endingFade; //sonst ist die Überblende zu schnell
     public Vector3 kalenderZoomPos, kalenderZoomScale;
     Tween blackTween;
+    public Sprite[] endImage;  
+
 
     private void Start()
     {
@@ -71,6 +75,17 @@ public class BGManager : MonoBehaviour
     public IEnumerator EddyFlicker()
     {
         yield return null;
+    }
+
+    public IEnumerator AnEnd(int endID)
+    {
+        ConversationManager.Instance.enabled = false;        
+        endScreen.raycastTarget = true;
+        endScreen.sprite = endImage[endID];
+        endScreen.color = new Color(0, 0, 0, 0);
+        endScreen.DOFade(1, endingFade);
+        yield return new WaitForSeconds(endingFade);
+        endScreen.DOColor(Color.white, endingFade);
     }
 
 }

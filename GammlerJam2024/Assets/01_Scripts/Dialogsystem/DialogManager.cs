@@ -28,7 +28,7 @@ public class DialogManager : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.F))
         {
-            ConversationManager.Instance.ScrollSpeed = 0.25f;
+            ConversationManager.Instance.ScrollSpeed = 1;
         }
     }
 
