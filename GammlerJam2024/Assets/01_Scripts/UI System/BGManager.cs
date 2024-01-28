@@ -80,12 +80,15 @@ public class BGManager : MonoBehaviour
     }
     public IEnumerator EddyFirstEncounter()
     {
-        yield return new WaitForSeconds(1+ minBlackTime);
-        DOTween.KillAll();
-        eddy.transform.localPosition = eddy.originPosition - new Vector3(0, 10, 0);
-        eddy.spriteRenderer.color = Color.gray;
-        eddy.spriteRenderer.sortingOrder = 8;
-        eddyTween = eddy.transform.DOLocalMoveY(eddy.originPosition.y, 5);
+        if (!eddy.charaLeft)
+        {
+            yield return new WaitForSeconds(1 + minBlackTime);
+            DOTween.KillAll();
+            eddy.transform.localPosition = eddy.originPosition - new Vector3(0, 10, 0);
+            eddy.spriteRenderer.color = Color.gray;
+            eddy.spriteRenderer.sortingOrder = 8;
+            eddyTween = eddy.transform.DOLocalMoveY(eddy.originPosition.y, 5);
+        }
     }
     public IEnumerator EddyReveal()
     {
