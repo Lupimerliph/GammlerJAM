@@ -58,6 +58,6 @@ public class NPCEvents : MonoBehaviour
 
     public void FritzchenReveal()
     {
-        GameManager.gmManager.bgManager.EddyReveal();
+        StartCoroutine(GameManager.gmManager.bgManager.EddyReveal());
     }
 }

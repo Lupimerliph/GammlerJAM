@@ -839,7 +839,7 @@ MonoBehaviour:
   lobbyBG: {fileID: 21300000, guid: 4d4e91b5a7d45ae4ba495a52d4c3b51d, type: 3}
   funZoneBG: {fileID: 21300000, guid: 60d1539e347c6b149ab8943e6dce19b0, type: 3}
   cafeteriaBG: {fileID: 21300000, guid: eec9c9202b94f8f43868075a7a84abfe, type: 3}
-  schrankBG: {fileID: 0}
+  schrankBG: {fileID: 21300000, guid: ebc1530ad0d761d4bbf9d9488452d9b0, type: 3}
   currentRoomBG: {fileID: 0}
   minBlackTime: 1
   minZoomTime: 16

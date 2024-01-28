@@ -46,6 +46,8 @@ public class DiaActivator : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !DialogManager.diaManager.inConversation)
         {            
             ConversationManager.Instance.StartConversation(DialogManager.diaManager.SetCurrentDialog(thisChara));
+            DOTween.KillAll();
+            transform.localPosition = originPosition;
             MoveCharacter(fullPosition, Vector3.one);
             DialogManager.diaManager.currentSpeaker = this;
             HideNonSpeaker(false);

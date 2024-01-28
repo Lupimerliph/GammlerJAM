@@ -14,7 +14,7 @@ public class BGManager : MonoBehaviour
     public Sprite lobbyBG, funZoneBG, cafeteriaBG, schrankBG, currentRoomBG;
     public float minBlackTime = 1, minZoomTime = 1, endingFade; //sonst ist die Überblende zu schnell
     public Vector3 kalenderZoomPos, kalenderZoomScale;
-    Tween blackTween;
+    Tween blackTween, eddyTween;
     public Sprite[] endImage;
     public DiaActivator eddy, mc;
 
@@ -82,14 +82,18 @@ public class BGManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1+ minBlackTime);
         DOTween.KillAll();
-        eddy.transform.position -= new Vector3(0, 10, 0);
+        eddy.transform.localPosition = eddy.originPosition - new Vector3(0, 10, 0);
         eddy.spriteRenderer.color = Color.gray;
         eddy.spriteRenderer.sortingOrder = 8;
-        eddy.transform.DOMoveY(eddy.originPosition.y, 5);
+        eddyTween = eddy.transform.DOLocalMoveY(eddy.originPosition.y, 5);
     }
-    public void EddyReveal()
+    public IEnumerator EddyReveal()
     {
-        //change LayerOrder behind BS, Make BS appear(fast or instant), return 2 second later with the reveal
+        eddy.spriteRenderer.sortingOrder = 0;
+        blackScreen.color = Color.black;
+        yield return new WaitForSeconds(3); //switch pose ist als event im dia editor
+        blackScreen.color = Color.clear;
+
     }
 
 
