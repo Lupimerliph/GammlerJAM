@@ -22,6 +22,7 @@ public class NPCEvents : MonoBehaviour
         DialogManager.diaManager.currentSpeaker.SwitchPose(emoteID);
     }
 
+    #region Eddy
     public void FlickeringLights()
     {
         GameManager.gmManager.bgManager.Flicker();
@@ -35,6 +36,12 @@ public class NPCEvents : MonoBehaviour
     {
         GameManager.gmManager.bgManager.EddyFlicker();
     }
+
+    public void FritzchenReveal()
+    {
+        StartCoroutine(GameManager.gmManager.bgManager.EddyReveal());
+    }
+    #endregion
 
     public void SetNewStartingPoint(GameObject diaObject)
     {
@@ -54,10 +61,5 @@ public class NPCEvents : MonoBehaviour
     public void CharacterLeaves(float fadeLength)
     {
         DialogManager.diaManager.SpeakerLeaves(fadeLength);
-    }
-
-    public void FritzchenReveal()
-    {
-        StartCoroutine(GameManager.gmManager.bgManager.EddyReveal());
     }
 }
