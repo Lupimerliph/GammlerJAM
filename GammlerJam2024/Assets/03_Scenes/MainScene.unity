@@ -850,6 +850,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f694445e5cca3bd4b8a3575cd386792b, type: 3}
   - {fileID: 21300000, guid: 7549d1e3c49c84f4092037ce559ac24d, type: 3}
   eddy: {fileID: 92013532}
+  mc: {fileID: 115649464}
 --- !u!1 &1026338112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1598,8 +1599,8 @@ MonoBehaviour:
   fullPosition: {x: 5, y: -0.2, z: 0}
   originScale: {x: 0, y: 0, z: 0}
   defaultPose: {fileID: 21300000, guid: 652b9bdde10162d43b8b761d961a2803, type: 3}
-  pose1: {fileID: 0}
-  pose2: {fileID: 0}
+  pose1: {fileID: 21300000, guid: 7b110feba54836642b270220d4438523, type: 3}
+  pose2: {fileID: 21300000, guid: 1495feead6960c94cb750d592f080a04, type: 3}
   pose3: {fileID: 0}
   pose4: {fileID: 0}
   spriteRenderer: {fileID: 0}
@@ -1635,7 +1636,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1264019, y: 0.15957546}
+  m_Offset: {x: 0.7594102, y: 0.012242317}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1646,7 +1647,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 34.63074, y: 45.34942}
+  m_Size: {x: 4.809139, y: 10.431099}
   m_EdgeRadius: 0
 --- !u!212 &1728532015
 SpriteRenderer:

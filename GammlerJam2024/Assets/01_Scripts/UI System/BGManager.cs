@@ -16,7 +16,7 @@ public class BGManager : MonoBehaviour
     public Vector3 kalenderZoomPos, kalenderZoomScale;
     Tween blackTween;
     public Sprite[] endImage;
-    public DiaActivator eddy;
+    public DiaActivator eddy, mc;
 
 
     private void Start()
@@ -45,6 +45,7 @@ public class BGManager : MonoBehaviour
                 break;
         }
         StartCoroutine(FadeToBlack(1));
+        mc.charaRoom = currentRoom;
     }
     
     public IEnumerator FadeToBlack(float fadeDuration)
@@ -72,7 +73,7 @@ public class BGManager : MonoBehaviour
 
         blackScreen.DOFade(0, zoomDuration);
     }
-
+    
     public void EddyFlicker()
     {
         eddy.spriteRenderer.DOColor(Color.white, 4).SetEase(Ease.InBounce);
