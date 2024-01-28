@@ -11,11 +11,12 @@ public class BGManager : MonoBehaviour
     SpriteRenderer spriteRenderer;
     public room thisRoom;
     public Image blackScreen, endScreen;
-    public Sprite lobbyBG, funZoneBG, cafeteriaBG, toiletBG, currentRoomBG;
+    public Sprite lobbyBG, funZoneBG, cafeteriaBG, schrankBG, currentRoomBG;
     public float minBlackTime = 1, minZoomTime = 1, endingFade; //sonst ist die Überblende zu schnell
     public Vector3 kalenderZoomPos, kalenderZoomScale;
     Tween blackTween;
-    public Sprite[] endImage;  
+    public Sprite[] endImage;
+    public DiaActivator eddy;
 
 
     private void Start()
@@ -23,12 +24,6 @@ public class BGManager : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         currentRoomBG = spriteRenderer.sprite;
         blackScreen.color = new Color(0,0,0,1);
-    }
-
-    public void Flicker()
-    {
-        //add sfx later
-        blackScreen.DOFade(0, 4).SetEase(Ease.InBounce);
     }
 
     public void SetBG(room currentRoom)
@@ -45,8 +40,8 @@ public class BGManager : MonoBehaviour
             case room.cafeteria:
                 currentRoomBG = cafeteriaBG;
                 break;
-            case room.toilet:
-                currentRoomBG = toiletBG;
+            case room.shelves:
+                currentRoomBG = schrankBG;
                 break;
         }
         StartCoroutine(FadeToBlack(1));
@@ -57,9 +52,15 @@ public class BGManager : MonoBehaviour
         blackScreen.DOFade(1, fadeDuration);        
         yield return new WaitForSeconds(fadeDuration + minBlackTime);
         spriteRenderer.sprite = currentRoomBG;
-        blackScreen.DOFade(0, fadeDuration);
+        DialogManager.diaManager.currentSpeaker.HideNonSpeaker(true);
+        blackTween = blackScreen.DOFade(0, fadeDuration);
     }
 
+    public void Flicker()
+    {
+        //add sfx later
+        blackScreen.DOFade(0, 4).SetEase(Ease.InBounce);
+    }
 
     public IEnumerator ZoomOnCalender(float zoomDuration)
     {
@@ -72,10 +73,24 @@ public class BGManager : MonoBehaviour
         blackScreen.DOFade(0, zoomDuration);
     }
 
-    public IEnumerator EddyFlicker()
+    public void EddyFlicker()
     {
-        yield return null;
+        eddy.spriteRenderer.DOColor(Color.white, 4).SetEase(Ease.InBounce);
     }
+    public IEnumerator EddyFirstEncounter()
+    {
+        yield return new WaitForSeconds(1+ minBlackTime);
+        DOTween.KillAll();
+        eddy.transform.position -= new Vector3(0, 10, 0);
+        eddy.spriteRenderer.color = Color.gray;
+        eddy.spriteRenderer.sortingOrder = 8;
+        eddy.transform.DOMoveY(eddy.originPosition.y, 5);
+    }
+    public void EddyReveal()
+    {
+        //change LayerOrder behind BS, Make BS appear(fast or instant), return 2 second later with the reveal
+    }
+
 
     public IEnumerator AnEnd(int endID)
     {
@@ -92,5 +107,5 @@ public class BGManager : MonoBehaviour
 
 public enum room
 {
-    lobby, bureau, cafeteria, toilet
+    lobby, bureau, cafeteria, shelves, none
 }

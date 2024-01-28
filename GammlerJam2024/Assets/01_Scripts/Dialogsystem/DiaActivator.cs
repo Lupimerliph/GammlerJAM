@@ -11,7 +11,7 @@ public class DiaActivator : MonoBehaviour
     public float transitionDuration; //shorter = more speed
     public Vector3 originPosition, fullPosition, originScale;
     public Sprite defaultPose, pose1, pose2, pose3, pose4;
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
     private bool activityStatus = true;
 
     private void Start()
@@ -19,7 +19,7 @@ public class DiaActivator : MonoBehaviour
         originPosition = transform.localPosition;
         originScale = transform.localScale;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        if(charaRoom!= GameManager.gmManager.bgManager.thisRoom)
+        if(thisChara != charaID.mc)
         {
             ActiveCharacter(false);
         }

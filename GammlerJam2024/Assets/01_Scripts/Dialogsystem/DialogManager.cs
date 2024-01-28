@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DialogueEditor;
+using DG.Tweening;
 
 public class DialogManager : MonoBehaviour
 {
@@ -95,7 +96,11 @@ public class DialogManager : MonoBehaviour
         Debug.Log("This Conversation is over");
     }
 
-    
+    public void SpeakerLeaves(float fadeLength)
+    {
+        currentSpeaker.GetComponent<Collider2D>().enabled = false;
+        currentSpeaker.spriteRenderer.DOColor(Color.clear, fadeLength);
+    }
 
     public void SetNewConvo(GameObject ConvoObj)
     {

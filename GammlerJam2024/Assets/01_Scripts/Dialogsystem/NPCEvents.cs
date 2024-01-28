@@ -27,9 +27,13 @@ public class NPCEvents : MonoBehaviour
         GameManager.gmManager.bgManager.Flicker();
     }
 
-    public void WeHadThisConversation()
+    public void EddyFirstEncounter()
     {
-        //need ref to the chara
+        StartCoroutine(GameManager.gmManager.bgManager.EddyFirstEncounter());
+    }
+    public void EddyFlickers()
+    {
+        GameManager.gmManager.bgManager.EddyFlicker();
     }
 
     public void SetNewStartingPoint(GameObject diaObject)
@@ -45,5 +49,15 @@ public class NPCEvents : MonoBehaviour
     public void TriggerEnd(int endID)
     {
         StartCoroutine(GameManager.gmManager.bgManager.AnEnd(endID));
+    }
+
+    public void CharacterLeaves(float fadeLength)
+    {
+        DialogManager.diaManager.SpeakerLeaves(fadeLength);
+    }
+
+    public void FritzchenReveal()
+    {
+        GameManager.gmManager.bgManager.EddyReveal();
     }
 }
