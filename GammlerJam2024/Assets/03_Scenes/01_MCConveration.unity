@@ -363,7 +363,6 @@ GameObject:
   - component: {fileID: 848069385}
   - component: {fileID: 848069384}
   - component: {fileID: 848069386}
-  - component: {fileID: 848069387}
   - component: {fileID: 848069388}
   - component: {fileID: 848069392}
   - component: {fileID: 848069391}
@@ -436,6 +435,18 @@ MonoBehaviour:
           m_StringArgument: cafeteria
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1106970471}
+        m_TargetAssemblyTypeName: NPCEvents, Assembly-CSharp
+        m_MethodName: EddyFirstEncounter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 7
   TMPFont: {fileID: 11400000, guid: 8e42b418db832ef418b14732f83f64d1, type: 2}
   Icon: {fileID: 0}
@@ -465,18 +476,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: bureau
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1106970471}
-        m_TargetAssemblyTypeName: NPCEvents, Assembly-CSharp
-        m_MethodName: EddyFirstEncounter
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   NodeID: 6
@@ -511,25 +510,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   NodeID: 8
-  TMPFont: {fileID: 11400000, guid: 8e42b418db832ef418b14732f83f64d1, type: 2}
-  Icon: {fileID: 0}
-  Audio: {fileID: 0}
---- !u!114 &848069387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 848069381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event:
-    m_PersistentCalls:
-      m_Calls: []
-  NodeID: 9
   TMPFont: {fileID: 11400000, guid: 8e42b418db832ef418b14732f83f64d1, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
@@ -640,12 +620,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 18
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":376.5,\"yPos\":141},\"ID\":6,\"ParamActions\":[{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"inCafe\",\"Value\":false},{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"inBureau\",\"Value\":true},{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"inLobby\",\"Value\":false}],\"TMPFontGUID\":null,\"Text\":\"Suche
-    im B\xFCro\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableBoolCondition:#DialogueEditor\",\"ParameterName\":\"inCafe\",\"CheckType\":0,\"RequiredValue\":false}],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":838.5,\"yPos\":125},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Suche
-    in der K\xFCche\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":603.5,\"yPos\":202},\"ID\":8,\"ParamActions\":[{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"inLobby\",\"Value\":true},{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"inBureau\",\"Value\":false},{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"inCafe\",\"Value\":false}],\"TMPFontGUID\":null,\"Text\":\"Suche
-    in der Lobby\",\"parentUIDs\":[0],\"SpeechUID\":-1}],\"Parameters\":[{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"inLobby\",\"BoolValue\":true},{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"inCafe\",\"BoolValue\":false},{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"inBureau\",\"BoolValue\":false}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableBoolCondition:#DialogueEditor\",\"ParameterName\":\"inBureau\",\"CheckType\":0,\"RequiredValue\":false}],\"NodeUID\":6},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableBoolCondition:#DialogueEditor\",\"ParameterName\":\"inCafe\",\"CheckType\":0,\"RequiredValue\":false}],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":608,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ich
-    sollte mich auf die Suche machen, bevor ich wieder l\xE4nger hier bleiben muss.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ich\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":830.5,\"yPos\":352},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Au\xDFer
-    Topfschw\xE4mme finde ich hier nichts.\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ich\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":838.5,\"yPos\":221},\"ID\":10,\"ParamActions\":[{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"inCafe\",\"Value\":true},{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"inLobby\",\"Value\":false},{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"inBureau\",\"Value\":false}],\"TMPFontGUID\":null,\"Text\":\".....\",\"parentUIDs\":[7],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":601,\"yPos\":285},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\".....\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":373,\"yPos\":224},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\".....\",\"parentUIDs\":[6],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":605,\"yPos\":412},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hier
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":15,\"yPos\":411},\"ID\":6,\"ParamActions\":[{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"inCafe\",\"Value\":false},{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"inBureau\",\"Value\":true},{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"inLobby\",\"Value\":false}],\"TMPFontGUID\":null,\"Text\":\"Suche
+    im B\xFCro\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableBoolCondition:#DialogueEditor\",\"ParameterName\":\"inCafe\",\"CheckType\":0,\"RequiredValue\":false}],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":479,\"yPos\":405},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Suche
+    in der K\xFCche\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":243,\"yPos\":472},\"ID\":8,\"ParamActions\":[{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"inLobby\",\"Value\":true},{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"inBureau\",\"Value\":false},{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"inCafe\",\"Value\":false}],\"TMPFontGUID\":null,\"Text\":\"Suche
+    in der Lobby\",\"parentUIDs\":[0],\"SpeechUID\":-1}],\"Parameters\":[{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"inLobby\",\"BoolValue\":true},{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"inCafe\",\"BoolValue\":false},{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"inBureau\",\"BoolValue\":false}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableBoolCondition:#DialogueEditor\",\"ParameterName\":\"inBureau\",\"CheckType\":0,\"RequiredValue\":false}],\"NodeUID\":6},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableBoolCondition:#DialogueEditor\",\"ParameterName\":\"inCafe\",\"CheckType\":0,\"RequiredValue\":false}],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":247.5,\"yPos\":292},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ich
+    sollte mich auf die Suche machen, bevor ich wieder l\xE4nger hier bleiben muss.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ich\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":478,\"yPos\":491},\"ID\":10,\"ParamActions\":[{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"inCafe\",\"Value\":true},{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"inLobby\",\"Value\":false},{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"inBureau\",\"Value\":false}],\"TMPFontGUID\":null,\"Text\":\".....\",\"parentUIDs\":[7],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":240.5,\"yPos\":555},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\".....\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":12.5,\"yPos\":494},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\".....\",\"parentUIDs\":[6],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":244.5,\"yPos\":682},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hier
     ist nichts.\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ich\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: Ich
@@ -656,7 +635,6 @@ MonoBehaviour:
   - {fileID: 848069385}
   - {fileID: 848069384}
   - {fileID: 848069386}
-  - {fileID: 848069387}
   - {fileID: 848069388}
   - {fileID: 848069392}
   - {fileID: 848069391}
@@ -665,7 +643,31 @@ MonoBehaviour:
   EndConversationFont: {fileID: 11400000, guid: 8e42b418db832ef418b14732f83f64d1, type: 2}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1106970471}
+        m_TargetAssemblyTypeName: NPCEvents, Assembly-CSharp
+        m_MethodName: ChangeRoom
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: cafeteria
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1106970471}
+        m_TargetAssemblyTypeName: NPCEvents, Assembly-CSharp
+        m_MethodName: EddyFirstEncounter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1106970470
 Transform:
   m_ObjectHideFlags: 0
@@ -705,7 +707,7 @@ GameObject:
   - component: {fileID: 1575867537}
   - component: {fileID: 1575867536}
   m_Layer: 0
-  m_Name: MCBeginingConvo
+  m_Name: _MCBeginingConvo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -724,15 +726,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 11
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":222,\"yPos\":-209},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ich
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":401,\"yPos\":-247},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ich
     wei\xDF echt nicht, wieso ich jeden Tag so fr\xFCh aufstehe und diesen Zirkus
-    mitmache. \\r                      \\nseufz\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ich\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":223,\"yPos\":-72},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"(
+    mitmache. \\r                      \\nseufz\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ich\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":402,\"yPos\":-110},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"(
     Ich hoffe, dass ich dieses Mal nicht wieder eine Viertel Stunde nach meinem Mopp
-    suchen muss\u2026 Ich kriege immerhin keine \xDCberstunden bezahlt\u2026 )\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ich\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":221,\"yPos\":61},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\".....\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":216,\"yPos\":196},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"..........\",\"parentUIDs\":[4],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":218,\"yPos\":340},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Stimmt,
+    suchen muss\u2026 Ich kriege immerhin keine \xDCberstunden bezahlt\u2026 )\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ich\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":400,\"yPos\":23},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\".....\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":395,\"yPos\":158},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"..........\",\"parentUIDs\":[4],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":397,\"yPos\":302},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Stimmt,
     heute ist \u201CExam Day\u201D... Was das wohl bedeutet? So wie es hier aussieht,
-    will ich das vielleicht gar nicht wissen.\",\"parentUIDs\":[6],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ich\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":233,\"yPos\":590},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\".....\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":225,\"yPos\":754},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Nat\xFCrlich\u2026
+    will ich das vielleicht gar nicht wissen.\",\"parentUIDs\":[6],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ich\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":412,\"yPos\":552},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\".....\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":404,\"yPos\":716},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Nat\xFCrlich\u2026
     mein Mopp und alles andere ist weit und breit nicht zu sehen. Ich sollte mich
-    auf die Suche machen, bevor ich wieder l\xE4nger hier bleiben muss. \\r\\n\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ich\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":236,\"yPos\":473},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Das
+    auf die Suche machen, bevor ich wieder l\xE4nger hier bleiben muss. \\r\\n\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ich\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":415,\"yPos\":435},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Das
     ist der einzige Moment in dem ich froh bin, nur eine Putzkraft zu sein und mit
     niemandem interagieren zu m\xFCssen.\\r\",\"parentUIDs\":[7],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ich\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
@@ -752,19 +754,7 @@ MonoBehaviour:
   EndConversationFont: {fileID: 11400000, guid: 8e42b418db832ef418b14732f83f64d1, type: 2}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1106970471}
-        m_TargetAssemblyTypeName: NPCEvents, Assembly-CSharp
-        m_MethodName: SetNewStartingPoint
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1106970468}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!4 &1575867537
 Transform:
   m_ObjectHideFlags: 0

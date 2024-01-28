@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 924315842}
   - component: {fileID: 924315844}
   m_Layer: 0
-  m_Name: TestConversation
+  m_Name: _TestConversation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 1
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":476.5,"yPos":21},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Ich
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":576,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Ich
     bin ein Test","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: TestTestTest

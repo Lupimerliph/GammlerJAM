@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 1189115210}
   - component: {fileID: 1189115212}
   m_Layer: 0
-  m_Name: FritzDefaultConversation
+  m_Name: _FritzDefaultConversation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 1
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":459.5,"yPos":257},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Was
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":576,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Was
     tust du hier? Hast du nicht einen Job zu erledigen??","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":null,"OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Fritz??

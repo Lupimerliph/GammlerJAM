@@ -43,27 +43,16 @@ public class GameManager : MonoBehaviour
 
     public GameObject SetNewConvo(int sceneID)
     {
-        return SceneManager.GetSceneAt(sceneID).GetRootGameObjects()[0];
+        foreach(GameObject obj in SceneManager.GetSceneAt(sceneID).GetRootGameObjects())
+        {
+            if (obj.name.StartsWith("_"))
+            {
+                return obj;
+            }
+        }
+        Debug.LogError("couldn't find Object");
+        return null;
     }
 
-    #region Screen aspect ration
-
-    private float lastWidth;
-    private float lastHeight;
-
-    void Update()
-    {
-        if (lastWidth != Screen.width)
-        {
-            Screen.SetResolution(Screen.width, Screen.width * (16 / 9), false);
-        }
-        else if (lastHeight != Screen.height)
-        {
-            Screen.SetResolution(Screen.height * (9 / 16), Screen.height, false);
-        }
-
-        lastWidth = Screen.width;
-        lastHeight = Screen.height;
-    }
-    #endregion
+   
 }
