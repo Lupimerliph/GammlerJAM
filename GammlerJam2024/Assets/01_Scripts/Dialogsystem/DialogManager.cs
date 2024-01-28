@@ -12,7 +12,6 @@ public class DialogManager : MonoBehaviour
     public NPCConversation currentDialog;
     public NPCConversation testDia, milDia, enDia, pebDia, bearDia, friDia, pabloDia, mcDia;  
     public DiaActivator currentSpeaker;
-
     private void Awake()
     {
         if (diaManager == null)

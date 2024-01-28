@@ -13,6 +13,7 @@ public class DiaActivator : MonoBehaviour
     public Sprite defaultPose, pose1, pose2, pose3, pose4;
     public SpriteRenderer spriteRenderer;
     private bool activityStatus = true;
+    public bool charaLeft;
 
     private void Start()
     {
@@ -32,7 +33,7 @@ public class DiaActivator : MonoBehaviour
             if(status && charaRoom != GameManager.gmManager.bgManager.thisRoom)
             {
             }
-            else
+            else if(!charaLeft)
             {
                 spriteRenderer.enabled = status;
                 GetComponent<Collider2D>().enabled = status;
@@ -51,6 +52,7 @@ public class DiaActivator : MonoBehaviour
             MoveCharacter(fullPosition, Vector3.one);
             DialogManager.diaManager.currentSpeaker = this;
             HideNonSpeaker(false);
+            if(thisChara == charaID.enrico) { charaLeft = true; }
         }             
     }
     public void HideNonSpeaker(bool toUnHide)

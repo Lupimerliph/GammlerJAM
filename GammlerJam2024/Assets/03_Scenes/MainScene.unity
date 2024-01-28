@@ -181,6 +181,7 @@ MonoBehaviour:
   pose3: {fileID: 21300000, guid: 23077aec6c88e6646995228a4f717bd5, type: 3}
   pose4: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  charaLeft: 0
 --- !u!61 &92013533
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -321,6 +322,7 @@ MonoBehaviour:
   pose3: {fileID: 0}
   pose4: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  charaLeft: 0
 --- !u!61 &115649465
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1601,9 +1603,10 @@ MonoBehaviour:
   defaultPose: {fileID: 21300000, guid: 652b9bdde10162d43b8b761d961a2803, type: 3}
   pose1: {fileID: 21300000, guid: 7b110feba54836642b270220d4438523, type: 3}
   pose2: {fileID: 21300000, guid: 1495feead6960c94cb750d592f080a04, type: 3}
-  pose3: {fileID: 0}
+  pose3: {fileID: 21300000, guid: e119d4313d657024aaec5e5952fd7e6a, type: 3}
   pose4: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  charaLeft: 0
 --- !u!61 &1728532014
 BoxCollider2D:
   m_ObjectHideFlags: 0
